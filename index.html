@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKALA 소개</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f7fb;
+        --surface: #ffffff;
+        --text: #14213d;
+        --muted: #5f6b7a;
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --accent: #0f766e;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Pretendard", "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #eef5ff 0%, var(--bg) 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      a { color: inherit; text-decoration: none; }
+      .container {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0 32px;
+      }
+      .brand {
+        font-size: 1.3rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .nav a {
+        margin-left: 16px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 32px;
+        align-items: center;
+        padding: 36px 0 48px;
+      }
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0 0 16px;
+        letter-spacing: -0.03em;
+      }
+      .hero p {
+        font-size: 1.05rem;
+        color: var(--muted);
+        margin: 0 0 24px;
+      }
+      .buttons a {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+      .buttons .primary {
+        background: var(--primary);
+        color: white;
+      }
+      .buttons .primary:hover { background: var(--primary-dark); }
+      .buttons .secondary {
+        background: #e8f0ff;
+        color: var(--primary-dark);
+      }
+      .card {
+        background: var(--surface);
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: 0 16px 40px rgba(20, 33, 61, 0.08);
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+      .stat {
+        background: #f8fbff;
+        border-radius: 16px;
+        padding: 16px;
+        text-align: center;
+      }
+      .stat strong { display: block; font-size: 1.15rem; }
+      .section {
+        padding: 28px 0 8px;
+      }
+      .section h2 {
+        font-size: 1.45rem;
+        margin-bottom: 12px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .feature {
+        background: var(--surface);
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(20, 33, 61, 0.06);
+      }
+      .feature h3 { margin-top: 0; margin-bottom: 8px; }
+      .feature p { margin: 0; color: var(--muted); }
+      footer {
+        padding: 36px 0 24px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .hero, .grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 640px) {
+        header { flex-direction: column; align-items: flex-start; gap: 8px; }
+        .nav a { margin: 0 12px 0 0; }
+        .stats { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">SKALA</div>
+        <nav class="nav">
+          <a href="#about">소개</a>
+          <a href="#features">특징</a>
+          <a href="#contact">문의</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <h1>사람과 기술이 함께 성장하는 SKALA</h1>
+            <p>
+              SKALA는 창의적 아이디어를 현실로 만들고, 지속 가능한 성장을 위한
+              디지털 솔루션을 제공하는 조직입니다. 사용자 중심의 경험과 기술적
+              전문성을 바탕으로 더 나은 미래를 만들어갑니다.
+            </p>
+            <div class="buttons">
+              <a class="primary" href="#contact">문의하기</a>
+              <a class="secondary" href="#features">더 알아보기</a>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <strong>10+</strong>
+                <span>프로젝트 경험</span>
+              </div>
+              <div class="stat">
+                <strong>100%</strong>
+                <span>사용자 중심 설계</span>
+              </div>
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>지속 가능한 지원</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2 id="about">SKALA가 지향하는 가치</h2>
+            <p>
+              SKALA는 단순한 기술 제공을 넘어, 문제를 깊이 이해하고 실제로
+              도움이 되는 결과를 만드는 데 집중합니다. 협업, 신뢰, 책임감을
+              바탕으로 고객과 함께 앞으로 나아갑니다.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="features">
+          <h2>SKALA의 핵심 강점</h2>
+          <div class="grid">
+            <article class="feature">
+              <h3>전략적 해결</h3>
+              <p>비즈니스 목표와 사용자 니즈를 연결해 가장 실용적인 방향을 제안합니다.</p>
+            </article>
+            <article class="feature">
+              <h3>기술적 전문성</h3>
+              <p>최신 기술과 검증된 방법론을 활용해 안정적이고 확장 가능한 솔루션을 만듭니다.</p>
+            </article>
+            <article class="feature">
+              <h3>지속 가능한 파트너십</h3>
+              <p>프로젝트가 끝난 뒤에도 함께 성장할 수 있는 장기적인 협업 관계를 지향합니다.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact">
+        <p>문의: hello@skala.example | 서울 / 온라인 협업 가능</p>
+      </footer>
+    </div>
+  </body>
+</html>
